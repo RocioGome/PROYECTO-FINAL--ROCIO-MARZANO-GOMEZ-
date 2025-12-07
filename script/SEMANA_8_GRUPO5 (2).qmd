@@ -1,0 +1,44 @@
+---
+title: "PROYECTO FINAL"
+author: "GRUPO_5"
+format: html
+editor: visual
+---
+
+## PROYECTO FINAL
+
+**INTEGRANTES:**\
+Huahuasoncco Sifuentes Rosario\
+Marzano Gomez Rocio\
+Tineo Berrospi Karol\
+Flores Ubaldo Katerine\
+Bartolo Najarro Yenny\
+\
+**SEMANA 8: Instalación de un paquete en Rstudio - realizar un gráfico estadístico (HISTOGRAMA)**
+
+```{r}
+#INSTALAR Y ACTIVAR UN PAQUETE "fdth"
+install.packages("fdth")
+library(fdth)
+```
+
+```{r}
+#IMPORTAR UN ARCHIVO CSV
+diabetes_1_ <- read_csv("C:/Users/MILAGROS/Downloads/s04_diabetes (1).csv")
+
+apertura <- diabetes_1_$Embarazos
+```
+
+```{r}
+#CREAR TABLA Y GRÁFICO 
+
+tabla <- fdt(apertura)
+tabla
+```
+
+```{r}
+#CREAR GRÁFICOS HISTOGRAMA Y DARLE COLOR
+
+hist(apertura)
+hist(apertura,col= "brown")
+```
